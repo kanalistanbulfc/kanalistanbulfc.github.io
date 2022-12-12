@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="rtehead.png" type="image/x-icon" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>guldum.net</title>
+  </head>
+  <body
+    style="background-image: url(./rte.png)"
+    class="
+      flex flex-col
+      justify-center
+      min-h-screen
+      bg-contain
+      p-6
+      overflow-hidden
+    "
+  >
+    <div class="flex">
+      <input
+        class="border self-center border-black rounded-md border-8 py-3 w-full"
+        onkeyup="asd()"
+        placeholder="guldur"
+        type="text"
+        id="otuzbir"
+      />
+      <button
+        onclick="matamatik()"
+        class="
+          text-white
+          bg-indigo-500
+          border-0
+          py-1
+          px-3
+          focus:outline-none
+          hover:bg-indigo-600
+          rounded
+          text-lg
+        "
+      >
+        bak bakim
+      </button>
+    </div>
+    <div>
+      <button
+        onclick="audio.play();"
+        class="
+          text-white
+          bg-indigo-500
+          border-0
+          py-1
+          px-3
+          focus:outline-none
+          hover:bg-indigo-600
+          rounded
+          text-lg
+        "
+      >
+        ver sesi
+      </button>
+
+      <input
+        type="range"
+        class="appearance-none bg-grey rounded outline-none slider-thumb"
+        id="ses"
+      />
+    </div>
+  </body>
+  <script>
+    function asd() {
+      const randoms = [
+        "SDLŞGFJŞADLSGJASŞLSGFJFŞLSFDGJDGŞFLSJDŞFLS",
+        "HAHAHAHAHAAHAHAHAAHAHAAHAHAAHA",
+        "sjsjsjsjsjsjsjsjsjsj",
+      ];
+      const yarra = ["31", "otuzbir", "osbir"];
+      const deger = document.getElementById("otuzbir").value;
+      if (yarra.includes(deger)) {
+        alert(randoms[Math.floor(Math.random() * randoms.length)]);
+      }
+    }
+    function matamatik() {
+      const randoms = [
+        "SDLŞGFJŞADLSGJASŞLSGFJFŞLSFDGJDGŞFLSJDŞFLS",
+        "HAHAHAHAHAAHAHAHAAHAHAAHAHAAHA",
+        "sjsjsjsjsjsjsjsjsjsj",
+      ];
+      var ayyhh = eval(
+        document.getElementById("otuzbir").value.replace(/[^-()\d/*+.]/g, "")
+      );
+      if (ayyhh == "31") {
+        alert(
+          randoms[Math.floor(Math.random() * randoms.length)] +
+            " " +
+            "MATAMATİK TE BİLİYON HE"
+        );
+      }
+    }
+    var audio = new Audio(
+      "https://cdn.discordapp.com/attachments/429785339104722944/916791072116604938/Recep_Tayyip_Erdogan_-_AK_Parti_Secim_Muzigi_2014_Ugur_Islak_-_Dombra-j6jL95BaSeM.m4a"
+    );
+    function volumeup() {
+      audio.volume += 0.1;
+    }
+
+    let volume = document.querySelector("#ses");
+    volume.addEventListener("change", function (e) {
+      audio.volume = e.currentTarget.value / 100;
+
+      if (audio.volume == 0) {
+        audio.volume = 1;
+      }
+    });
+  </script>
+</html>

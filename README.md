@@ -1,1 +1,1 @@
-# kanalistanbulfc.github.io
+# kanalistanbul.github.io

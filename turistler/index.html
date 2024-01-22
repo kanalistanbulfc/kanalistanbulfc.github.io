@@ -19,15 +19,11 @@
 	<body>
 		<div class="flex items-center w-screen h-screen">
 			<div class="card">
-				<img src="./images/altann.jpg" draggable="false" class="logo" />
-				<h1 class="title">Örsan Altan Öncül</h1>
+				<h1 class="title">kanal istanbul fan club</h1>
 	
 				<div class="flex items-center justify-center space-x-2 text-2xl text-center text-gray-300 select-none icons">
-					<a class="fab fa-instagram" href="https://www.instagram.com/altanoncul/"></a>
-					<a class="fab fa-twitter" href="https://www.twitter.com/answerisokk/"></a>
-					<a class="fab fa-spotify" href="https://open.spotify.com/user/answerisok/"></a>
-					<a class="fab fa-linkedin" href="https://www.linkedin.com/in/altanoncul/"></a>									 
-					<a href="https://glynet.com/@altan">
+					<a class="fab fa-twitter" href="https://www.twitter.com/kanalistanbulfc/"></a>
+					<a class="fab fa-github" href="https://www.github.com/kanalistanbul/"></a>									
 						<svg
 						version="1.0"
 						xmlns="http://www.w3.org/2000/svg"
@@ -59,41 +55,9 @@
 				</div>
 			
 				<div class="buttons">
-					<a href="https://glynet.com" class="btn btn-primary">Glynet</a> <a href="https://kanalistanbul.me" class="btn btn-primary">Kanal İstanbul</a> <a href="https://instagram.com/altansphotos" class="btn btn-primary">Photos</a>
+					<a href="https://kanalistanbul.nl/rehberler" class="btn btn-primary">Rehberler</a> <a href="https://kanalistanbul.nl/serverbackup" class="btn btn-primary">Kanalcraft</a>
 				</div>
 											      
-				<div class="font-medium text-center text-gray-300" style="padding-top: 15px;">
-					<p><i class="fas fa-envelope" aria-hidden="true"></i> altanoncul@glynet.com</p>
-					<a id="spotify-a" style="visibility: hidden;"><i class="fab fa-spotify" aria-hidden="true"></i> Listening to <span id="artist"></span> — <span id="song"></span></a>
-				</div>
-			</div>
-		</div>
-											      
-		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-		<script>
-			var options = {
-				strings: ['turkish, economics student in the netherlands', 'director at glynet'],
-				typeSpeed: 50,
-				backSpeed: 50,
-				fadeOutClass: 'typed-fade-out',
-				fadeOutDelay: 500,
-				loop: true,
-				showCursor: false,
-				loopCount: Infinity
-			}
-			
-			var typed = new Typed('.subtitle', options);
-
-			window.onload = async function() {
-				let { data } = await (await fetch('https://api.lanyard.rest/v1/users/357490823224492032')).json();
-				if (data.spotify) {
-					document.getElementById("artist").innerHTML = data.spotify.artist;
-					document.getElementById("song").innerHTML = data.spotify.song;
-					document.getElementById("spotify-a").setAttribute("href", `https://open.spotify.com/track/${data.spotify.track_id}?si=answerisok.me`);
-					document.getElementById("spotify-a").setAttribute("target", "_blank");
-					document.getElementById("spotify-a").style.visibility = "visible";
-				}
-			}
 		</script>
 	</body>
 </html>

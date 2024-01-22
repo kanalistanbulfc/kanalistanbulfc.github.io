@@ -14,7 +14,7 @@ xMax = win.innerWidth - boxLeft - boxWidth,
 yMax = win.innerHeight - boxTop - boxHeight,
 request = null,
 direction = 'se',
-speed = 50,
+speed = 35,
 timeout = null;
 
 init();
